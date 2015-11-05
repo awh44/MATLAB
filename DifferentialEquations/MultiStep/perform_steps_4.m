@@ -10,7 +10,7 @@ function [w] = perform_steps_4(step_func, f, a, b, y0, y1, y2, y3, h)
 %   y2        - the pre-calculated third initial value
 %   y3        - the pre-calculated fourth initial value
 %   h         - the step size to be used
-    n = (b - a) / h + 1;
+    n = floor((b - a) / h + 1);
     w = zeros(1, n);
     w(1) = y0;
     w(2) = y1;
